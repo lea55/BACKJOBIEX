@@ -3,11 +3,11 @@ package usecase
 import (
 	"fmt"
 
-	"BACKJOBIEX/src/application/dto"
-	"BACKJOBIEX/src/application/helpers"
-	"BACKJOBIEX/src/application/mappers"
-	"BACKJOBIEX/src/domain/entity"
-	"BACKJOBIEX/src/domain/repository"
+	"github.com/lea55/BACKJOBIEX/src/application/dto"
+	"github.com/lea55/BACKJOBIEX/src/application/helpers"
+	"github.com/lea55/BACKJOBIEX/src/application/mappers"
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
+	"github.com/lea55/BACKJOBIEX/src/domain/repository"
 
 	"github.com/pkg/errors"
 )

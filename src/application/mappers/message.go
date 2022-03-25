@@ -3,7 +3,7 @@ package mappers
 import (
 	"time"
 
-	"BACKJOBIEX/src/domain/entity"
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
 
 	"github.com/google/uuid"
 )

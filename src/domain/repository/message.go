@@ -1,6 +1,6 @@
 package repository
 
-import "BACKJOBIEX/src/domain/entity"
+import "github.com/lea55/BACKJOBIEX/src/domain/entity"
 
 type Message interface {
 	Save(message entity.Message) error

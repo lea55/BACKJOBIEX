@@ -1,6 +1,6 @@
 package repository
 
-import "BACKJOBIEX/src/domain/entity"
+import "github.com/lea55/BACKJOBIEX/src/domain/entity"
 
 type Project interface {
 	Save(project entity.Project) (string, error)

@@ -4,14 +4,14 @@ import (
 	"strings"
 	"time"
 
-	"BACKJOBIEX/src/application/dto"
-	"BACKJOBIEX/src/application/helpers"
-	"BACKJOBIEX/src/core/constants"
-	"BACKJOBIEX/src/domain/entity"
+	"github.com/lea55/BACKJOBIEX/src/application/dto"
+	"github.com/lea55/BACKJOBIEX/src/application/helpers"
+	"github.com/lea55/BACKJOBIEX/src/core/constants"
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
 
-	"BACKJOBIEX/src/application/mappers"
-	"BACKJOBIEX/src/domain/platforms"
-	"BACKJOBIEX/src/domain/repository"
+	"github.com/lea55/BACKJOBIEX/src/application/mappers"
+	"github.com/lea55/BACKJOBIEX/src/domain/platforms"
+	"github.com/lea55/BACKJOBIEX/src/domain/repository"
 
 	"github.com/google/uuid"
 	"github.com/pkg/errors"

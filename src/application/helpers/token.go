@@ -1,12 +1,13 @@
 package helpers
 
 import (
-	"BACKJOBIEX/src/domain/config"
 	"time"
+
+	"github.com/lea55/BACKJOBIEX/src/domain/config"
 
 	"github.com/golang-jwt/jwt"
 
-	"BACKJOBIEX/src/domain/entity"
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
 
 	"github.com/pkg/errors"
 )
