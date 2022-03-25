@@ -2,10 +2,11 @@ package helpers
 
 import (
 	"encoding/json"
-	"https://github.com/lea55/BACKJOBIEX/src/domain/entity"
 	"io/ioutil"
 	"log"
 	"os"
+
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
 )
 
 type Rol struct{}
