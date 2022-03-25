@@ -1,14 +1,16 @@
 package usecase
 
 import (
+	"go/constant"
 	"strings"
 	"time"
+
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
 
 	"github.com/google/uuid"
 	"github.com/lea55/BACKJOBIEX/src/application/dto"
 	"github.com/lea55/BACKJOBIEX/src/application/helpers"
 	"github.com/lea55/BACKJOBIEX/src/application/mappers"
-	"github.com/lea55/BACKJOBIEX/src/domain/entity"
 	"github.com/lea55/BACKJOBIEX/src/domain/platforms"
 	"github.com/lea55/BACKJOBIEX/src/domain/repository"
 	"github.com/pkg/errors"
@@ -63,7 +65,7 @@ func (p ProposalConfirmation) ConfirmProposal(model dto.RqConfirmProposal) (stri
 		return "", errors.Wrap(err, "Error En validación de propuesta")
 	}
 
-	if proposal.Status.Code == coreconstants.NewUserProposalStatusCode().Approved {
+	if proposal.Status.Code == constant.NewUserProposalStatusCode().Approved {
 		return "", errors.New("La propuesta ya ha sido aceptada")
 	}
 

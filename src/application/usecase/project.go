@@ -1,12 +1,13 @@
 package usecase
 
 import (
-	"github.com/jdpadillaac/jobiex-api/src/application/dto"
-	"github.com/jdpadillaac/jobiex-api/src/application/helpers"
-	"github.com/jdpadillaac/jobiex-api/src/application/mappers"
-	"github.com/jdpadillaac/jobiex-api/src/core/constants"
-	"github.com/jdpadillaac/jobiex-api/src/domain/entity"
-	"github.com/jdpadillaac/jobiex-api/src/domain/repository"
+	"BACKJOBIEX/src/core/constants"
+
+	"github.com/lea55/BACKJOBIEX/src/application/dto"
+	"github.com/lea55/BACKJOBIEX/src/application/helpers"
+	"github.com/lea55/BACKJOBIEX/src/application/mappers"
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
+	"github.com/lea55/BACKJOBIEX/src/domain/repository"
 	"github.com/pkg/errors"
 )
 
@@ -98,7 +99,7 @@ func (p Project) Save(rqModel dto.RqRegisterProject) (string, error) {
 		return "", errors.Wrap(err, "Error en validación de usuario en la base de datos")
 	}
 
-	status, err := p.statusRepo.GetByCode(coreconstants.NewProjectStatus().Opened)
+	status, err := p.statusRepo.GetByCode(constants.NewProjectStatus().Opened)
 	if err != nil {
 		return "", errors.Wrap(err, "Error en validación de usuario en la base de datos")
 	}

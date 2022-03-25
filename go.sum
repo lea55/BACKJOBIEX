@@ -2,3 +2,5 @@ github.com/golang-jwt/jwt v3.2.2+incompatible h1:IfV12K8xAKAnZqdXVzCZ+TOjboZ2keL
 github.com/golang-jwt/jwt v3.2.2+incompatible/go.mod h1:8pz2t5EyA70fFQQSrl6XZXzqecmYZeUEB8OUGHkxJ+I=
 github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/lea55/BACKJOBIEX v0.0.0-20220325131506-b265b624e889 h1:m/lMzV2LjXmBD/EJp6tJ7CD07Yh6sTQYyvZp9JF8tSM=
+github.com/lea55/BACKJOBIEX v0.0.0-20220325131506-b265b624e889/go.mod h1:6O5GImxNbDMJ3LZNM8EP6OEvm3bv/jqB/nUYMMSGjeI=

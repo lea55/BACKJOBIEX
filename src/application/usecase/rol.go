@@ -1,9 +1,9 @@
 package usecase
 
 import (
-	"github.com/jdpadillaac/jobiex-api/src/application/helpers"
-	"github.com/jdpadillaac/jobiex-api/src/domain/entity"
-	"github.com/jdpadillaac/jobiex-api/src/domain/repository"
+	"github.com/lea55/BACKJOBIEX/src/application/helpers"
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
+	"github.com/lea55/BACKJOBIEX/src/domain/repository"
 	"github.com/pkg/errors"
 )
 

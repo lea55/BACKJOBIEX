@@ -1,11 +1,13 @@
 package usecase
 
 import (
-	"github.com/jdpadillaac/jobiex-api/src/application/dto"
-	"github.com/jdpadillaac/jobiex-api/src/application/mappers"
-	"github.com/jdpadillaac/jobiex-api/src/core/constants"
-	"github.com/jdpadillaac/jobiex-api/src/domain/entity"
-	"github.com/jdpadillaac/jobiex-api/src/domain/repository"
+	"BACKJOBIEX/src/core/constants"
+
+	"github.com/lea55/BACKJOBIEX/src/application/dto"
+	"github.com/lea55/BACKJOBIEX/src/application/mappers"
+
+	"github.com/lea55/BACKJOBIEX/src/domain/entity"
+	"github.com/lea55/BACKJOBIEX/src/domain/repository"
 	"github.com/pkg/errors"
 )
 
@@ -79,7 +81,7 @@ func (p UserProposal) Save(rqModel dto.RqUserProposalRegister) error {
 		return err
 	}
 
-	status, err := p.userProposalStatusRepo.FindByCode(coreconstants.NewUserProposalStatusCode().Created)
+	status, err := p.userProposalStatusRepo.FindByCode(constants.NewUserProposalStatusCode().Created)
 	if err != nil {
 		return errors.Wrap(err, "Error en validación de estado de propuesta")
 	}

@@ -1,4 +1,4 @@
-package coreconstants
+package constants
 
 type UserProposalStatusCode struct {
 	Created     string

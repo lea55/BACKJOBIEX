@@ -1,4 +1,4 @@
-package coreconstants
+package constants
 
 const (
 	PaymentStsPending   = "PD001"
