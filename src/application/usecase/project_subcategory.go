@@ -1,9 +1,10 @@
 package usecase
 
 import (
-	"github.com/lea55/BACKJOBIEX/src/application/dto"
-	"github.com/lea55/BACKJOBIEX/src/domain/entity"
-	"github.com/lea55/BACKJOBIEX/src/domain/repository"
+	"BACKJOBIEX/src/application/dto"
+	"BACKJOBIEX/src/domain/entity"
+	"BACKJOBIEX/src/domain/repository"
+
 	"github.com/pkg/errors"
 )
 

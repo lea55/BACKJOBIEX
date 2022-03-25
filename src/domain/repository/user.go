@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/lea55/BACKJOBIEX/src/domain/entity"
+import "BACKJOBIEX/src/domain/entity"
 
 type User interface {
 	Save(user entity.User) (string, error)

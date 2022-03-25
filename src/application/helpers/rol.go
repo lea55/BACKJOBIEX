@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/lea55/BACKJOBIEX/src/domain/entity"
+	"BACKJOBIEX/src/domain/entity"
 )
 
 type Rol struct{}
