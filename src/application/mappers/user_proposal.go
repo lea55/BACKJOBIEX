@@ -3,9 +3,10 @@ package mappers
 import (
 	"time"
 
+	"BACKJOBIEX/src/application/dto"
+	"BACKJOBIEX/src/domain/entity"
+
 	"github.com/google/uuid"
-	"github.com/lea55/BACKJOBIEX/src/application/dto"
-	"github.com/lea55/BACKJOBIEX/src/domain/entity"
 )
 
 type UserProposalMapper struct {
