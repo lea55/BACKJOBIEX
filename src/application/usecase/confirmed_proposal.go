@@ -1,14 +1,14 @@
 package usecase
 
 import (
-	"go/constant"
 	"strings"
 	"time"
 
-	"BACKJOBIEX/src/domain/entity"
-
 	"BACKJOBIEX/src/application/dto"
 	"BACKJOBIEX/src/application/helpers"
+	"BACKJOBIEX/src/core/constants"
+	"BACKJOBIEX/src/domain/entity"
+
 	"BACKJOBIEX/src/application/mappers"
 	"BACKJOBIEX/src/domain/platforms"
 	"BACKJOBIEX/src/domain/repository"
@@ -66,7 +66,7 @@ func (p ProposalConfirmation) ConfirmProposal(model dto.RqConfirmProposal) (stri
 		return "", errors.Wrap(err, "Error En validación de propuesta")
 	}
 
-	if proposal.Status.Code == constant.NewUserProposalStatusCode().Approved {
+	if proposal.Status.Code == constants.NewUserProposalStatusCode().Approved {
 		return "", errors.New("La propuesta ya ha sido aceptada")
 	}
 
@@ -89,12 +89,12 @@ func (p ProposalConfirmation) ConfirmProposal(model dto.RqConfirmProposal) (stri
 		return "", errors.Wrap(err, "Error en validación de cliente")
 	}
 
-	paymentStatus, err := p.paymentStatusRepo.FindByCode(constant.PaymentStsPending)
+	paymentStatus, err := p.paymentStatusRepo.FindByCode(constants.PaymentStsPending)
 	if err != nil {
 		return "", errors.Wrap(err, "Error en validación de estado de pago")
 	}
 
-	paymentMethod, err := p.paymentMethodRepo.FindByCode(constant.PaymentMthUndefined)
+	paymentMethod, err := p.paymentMethodRepo.FindByCode(constants.PaymentMthUndefined)
 	if err != nil {
 		return "", errors.Wrap(err, "Error en validación de metodo de pago")
 	}
@@ -131,12 +131,12 @@ func (p ProposalConfirmation) ConfirmProposal(model dto.RqConfirmProposal) (stri
 		return "", errors.Wrap(err, "Error al guardar documento en la base de datos")
 	}
 
-	err = p.updateProposalStatus(constant.NewUserProposalStatusCode().Approved, proposal.ID)
+	err = p.updateProposalStatus(constants.NewUserProposalStatusCode().Approved, proposal.ID)
 	if err != nil {
 		return "", err
 	}
 
-	err = p.updateProjectStatus(constant.NewProjectStatus().InProgress, proposal.ProjectID)
+	err = p.updateProjectStatus(constants.NewProjectStatus().InProgress, proposal.ProjectID)
 	if err != nil {
 		return "", err
 	}
@@ -179,7 +179,7 @@ func (p ProposalConfirmation) GeneratePaymentLink(proposalID string) (string, er
 		return "", errors.Wrap(err, "Error en validación de propuesta")
 	}
 
-	if proposal.Status.Code != constant.NewUserProposalStatusCode().Approved {
+	if proposal.Status.Code != constants.NewUserProposalStatusCode().Approved {
 		return "", errors.New("La propuesta aun no se ha aprobado")
 	}
 
@@ -239,22 +239,22 @@ func (p ProposalConfirmation) PaymentConfirmation(proposalConfirmationID string,
 		return errors.Wrap(err, "Error al guarda pago en la app")
 	}
 
-	err = p.updateProposalStatus(constant.NewUserProposalStatusCode().DevProgress, proposalConfirmation.ProposalID)
+	err = p.updateProposalStatus(constants.NewUserProposalStatusCode().DevProgress, proposalConfirmation.ProposalID)
 	if err != nil {
 		return err
 	}
 
-	err = p.updateProjectStatus(constant.NewProjectStatus().InProgress, proposal.ProjectID)
+	err = p.updateProjectStatus(constants.NewProjectStatus().InProgress, proposal.ProjectID)
 	if err != nil {
 		return err
 	}
 
-	status, err := p.paymentStatusRepo.FindByCode(constant.PaymentStsConfirmed)
+	status, err := p.paymentStatusRepo.FindByCode(constants.PaymentStsConfirmed)
 	if err != nil {
 		return errors.Wrap(err, "Error en validación de estado de pago")
 	}
 
-	paymentMethod, err := p.paymentMethodRepo.FindByCode(constant.PaymentMthMercadoPago)
+	paymentMethod, err := p.paymentMethodRepo.FindByCode(constants.PaymentMthMercadoPago)
 	if err != nil {
 		return errors.Wrap(err, "Error en validación de metodo de pago")
 	}
